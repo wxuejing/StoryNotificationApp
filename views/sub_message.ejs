@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <title> Subscriber </title>
+    <script src="/javascripts/subscriber.js"></script>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Places Search Box</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/location.css">
+    <script src="/javascripts/location.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCe2jVX32NlHzhtnG99hfnAf543cU26R_0&libraries=places&callback=init"
+        async defer></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+
+</head>
+
+<body onload="getmessages()">
+    <h2>All active stories</h2>
+    <div>
+        <table id="messages" align="center">
+            <tr>
+                <td>Publisher Name</td>
+                <td>Category Name</td>
+                <td>File Path</td>
+            </tr>
+        </table>
+    </div>
+    <h3>Search your active stories</h3>
+    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+    <div id="map"></div>
+    <p>
+        Click the map to specify your location. <br>
+        Select the location's icon to choose the location for search. <br>
+    </p>
+    <div id="form-wrapper" style="text-align:center; vertical-align:left; padding:3%;">
+
+        <form align="center" id="filter">
+            <div>
+                <label for="startdate">Start Date</label>
+                <input type="date" id="startdate" name="startdate" />
+            </div>
+            <div>
+                <label for="starttime">Start Time</label>
+                <input type="time" id="starttime" name="starttime" />
+            </div>
+            <div>
+                <label for="enddate">End Date</label>
+                <input type="date" id="enddate" name="enddate" />
+            </div>
+            <div>
+                <label for="endtime">End Time</label>
+                <input type="time" id="endtime" name="endtime" />
+            </div>
+            <div>
+                <label for="latitude">Latitude</label>
+                <input type="text" id="latitude" name="latitude" value="0" />
+            </div>
+            <div>
+                <label for="longitude">Longitude</label>
+                <input type="text" id="longitude" name="longitude" value="0" />
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

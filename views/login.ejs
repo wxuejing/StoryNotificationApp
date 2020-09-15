@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>User Login</title>
+    <script src="/javascripts/login.js"></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+</head>
+
+<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <form style="border:1px solid #ccc">
+        <div class="container">
+            <h1>Log In</h1>
+            <hr>
+
+            <label for="username"><b>Username</b></label>
+            <input id="username" type="text" placeholder="Enter Username" name="Username" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input id="psw" type="password" placeholder="Enter Password" name="psw" required>
+
+            <div class="clearfix">
+                <button id="login" type="button" onclick="click_login()">Log in</button>
+                <button id="signup" type="button" onclick="click_signup()">Sign up</button>
+                <button id="deregister" type="button" onclick="click_deregister()">Deregister</button>
+            </div>
+
+            <div align="center" width=100% class="container">
+                <a href="/reader" align="center">I'm a reader</a>
+            </div>
+
+        </div>
+    </form>
+
+</body>
+
+</html>

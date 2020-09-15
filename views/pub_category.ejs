@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+  <title> Edit Category </title>
+  <script src="/javascripts/publisher.js"></script>
+  <script src="/javascripts/upload.js"></script>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+</head>
+
+<body onload="fillSelect()">
+
+  <div align="center">
+    <h2>Add new category</h2>
+    <label for="create_category"><b>Create new category</b></label>
+    <br>
+    <input id="category_name" type="text" placeholder="category name" name="category" required>
+    <br>
+    <div>
+      <select id="cat">
+        <option>Choose parent category</option>
+      </select>
+    </div>
+    <button id="submit" type="button" onclick="create_category()">Submit</button>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <title> Publisher </title>
+    <script>
+        function goToAllMessages() {
+            window.location.assign('/publisher/message');
+        }
+
+        function goToEditCategories() {
+            window.location.assign('/publisher/category')
+        }
+
+        function goToEditMessages() {
+            window.location.assign('/publisher/edit')
+        }
+    </script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+
+</head>
+
+<body>
+    <h2>What would you like to do?</h2>
+    <button id="pubmsg" onclick="goToEditMessages()">publish a message</button>
+    <button id="viewcurrent" onclick="goToAllMessages()">view current messages</button>
+    <button id="editcat" onclick="goToEditCategories()">edit categories</button>
+</body>
+
+</html>

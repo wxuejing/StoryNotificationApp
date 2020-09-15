@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <title> Subscriber </title>
+    <script src="/javascripts/subscriber.js"></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+</head>
+
+<body onload='getPublishersCategories()'>
+    <h2 align="center">Edit your subscriptions</h2>
+    <div id="section1">
+        <h3 align="center">Publishers you are currently subscribing to: </h3>
+        <table id="publishers" align="center">
+            <tr>
+                <td>Publisher</td>
+            </tr>
+        </table>
+        <div align="center">
+            <label> Enter the publisher you want to unsubscribe to: </label>
+            <input id="unsubscribe_publisher" align="center" type="text" placeholder="unsubscribe publisher" name="publisher"
+                required>
+            <button id="unpub" type="button" align="center" onclick="unsubscribe_publisher()">Submit</button>
+        </div>
+    </div>
+
+    <div>
+        <h3 align="center">Categories you are currently subscribing to:</h3>
+        <table id="categories" align="center">
+            <tr>
+                <td>Category</td>
+            </tr>
+        </table>
+        <div align="center">
+            <label> Enter the category you want to unsubscribe to: </label>
+            <input id="unsubscribe_category" align="center" type="text" placeholder="unsubscribe category" name="category"
+                required>
+            <button id="uncat" type="button" align="center" onclick="unsubscribe_category()">Submit</button>
+        </div>
+    </div>
+
+    <div id="section1">
+        <h3 align="center">Publishers you are not currently subscribing to: </h3>
+        <table id="un_publishers" align="center">
+            <tr>
+                <td>Publisher</td>
+            </tr>
+        </table>
+
+        <div align="center">
+            <label> Enter the publisher you want to subscribe to: </label>
+            <input id="subscribe_publisher" align="center" type="text" placeholder="subscribe publisher" name="publisher"
+                required>
+            <button id="subpub" type="button" align="center" onclick="subscribe_publisher()">Submit</button>
+        </div>
+    </div>
+
+    <div>
+        <h3 align="center">Categories you are not currently subscribing to:</h3>
+        <table id="un_categories" align="center">
+            <tr>
+                <td>Category</td>
+            </tr>
+        </table>
+        <div align="center">
+            <label> Enter the publisher you want to subscribe to: </label>
+            <input id="subscribe_category" align="center" type="text" placeholder="subscribe category" name="category"
+                required>
+            <button id="subcat" type="button" align="center" onclick="subscribe_category()">Submit</button>
+        </div>
+    </div>
+</body>
+
+</html>

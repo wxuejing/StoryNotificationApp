@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <title>Create story</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Places Search Box</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/location.css">
+    <script src="/javascripts/location.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCe2jVX32NlHzhtnG99hfnAf543cU26R_0&libraries=places&callback=init"
+        async defer></script>
+    <script src="/javascripts/upload.js"></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+</head>
+
+<body onload="populate()">
+
+    <h2>Upload a story</h2>
+    <p>
+        Click the map to specify your location. <br>
+        Select the location's icon to choose the location for search. <br>
+    </p>
+    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+    <div id="map"></div>
+    <div id="form-wrapper" style="text-align:center; vertical-align:left; padding:3%;">
+        <form align="center" id="uploadbanner" enctype="multipart/form-data" method="post" action="edit">
+            <div>
+                <label for="username">Username</label>
+                <input label="username" type="text" id="username" name="username" />
+            </div>
+            <div>
+                <label for="file">Upload File</label>
+                <input type="file" id="fileupload" name="myfile" required />
+            </div>
+            <div>
+                <label for="startdate">Start Date</label>
+                <input type="date" id="startdate" name="startdate" required />
+            </div>
+            <div>
+                <label for="starttime">Start Time</label>
+                <input type="time" id="starttime" name="starttime" required />
+            </div>
+            <div>
+                <label for="enddate">End Date</label>
+                <input type="date" id="enddate" name="enddate" required />
+            </div>
+            <div>
+                <label for="endtime">End Time</label>
+                <input type="time" id="endtime" name="endtime" required />
+            </div>
+            <div>
+                <label for="latitude">Latitude</label>
+                <input type="text" id="latitude" name="latitude" value="0" />
+            </div>
+            <div>
+                <label for="longitude">Longitude</label>
+                <input type="text" id="longitude" name="longitude" value="0" />
+            </div>
+            <div>
+                <label for="extend">Specify radius in miles</label>
+                <input type="number" id="raidus" name="radius" value="0" />
+            </div>
+            <div>
+                <label for="cat">Choose category</label>
+                <select type="text" id="cat" name="cat"></select>
+            </div>
+            <div>
+                <input type="submit" id="submit" value="submit" />
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

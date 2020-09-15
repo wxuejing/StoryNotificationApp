@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <title> Subscriber </title>
+    <script>
+        function goToAllMessages() {
+            window.location.assign('/subscriber/message');
+        }
+
+        function goToEditSubscriptions() {
+            window.location.assign('/subscriber/opt')
+        }
+    </script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+
+</head>
+
+<body>
+    <h2>What would you like to do?</h2>
+    <button id="allmsg" onclick="goToAllMessages()">view all messages</button>
+    <button id="editsub" onclick="goToEditSubscriptions()">edit subscriptions</button>
+</body>
+
+</html>
